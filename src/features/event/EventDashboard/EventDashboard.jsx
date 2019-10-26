@@ -65,7 +65,7 @@ const events =  [
 class EventDashboard extends Component {
     state = {
         events: events,
-        isOpen: false
+        isOpen: true
     }
 
     handleIsOpenToggle = () => {
