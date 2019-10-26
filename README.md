@@ -10,6 +10,7 @@ Identify stateful events
 Creating states
 cuid for getting unique id
 Form Submission in React
+CRUD of Events
 
 Features:
 List of all Events
