@@ -66,7 +66,7 @@ const events =  [
 class EventDashboard extends Component {
     state = {
         events: events,
-        isOpen: true
+        isOpen: false
     }
 
     handleIsOpenToggle = () => {
@@ -80,7 +80,8 @@ class EventDashboard extends Component {
         newEvent.hostPhotoURL = '/assets/user.png';
 
         this.setState(({events}) => ({
-            events: [...events, newEvent]
+            events: [...events, newEvent],
+            isOpen: false
         }));
     }
     render() {
