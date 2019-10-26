@@ -13,6 +13,7 @@ export default class EventForm extends Component {
     handleFormSubmit = evt => {
         evt.preventDefault();
         console.log(this.state);
+        this.props.createEvent(this.state);
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value})
@@ -36,7 +37,6 @@ export default class EventForm extends Component {
                         placeholder="Event Title"/>
                     
                 </Form.Field>
-                {this.state.title}
                 
                 <Form.Field>
                     <label>Event Date</label>
