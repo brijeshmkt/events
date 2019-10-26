@@ -10,10 +10,23 @@ export default class EventForm extends Component {
         hostedBy: ''
     };
 
+    componentDidMount() {
+        if (this.props.selectedEvent !== null) {
+            this.setState({
+                ...this.props.selectedEvent
+            })
+        }
+    }
+
     handleFormSubmit = evt => {
         evt.preventDefault();
-        console.log(this.state);
-        this.props.createEvent(this.state);
+        if (this.state.id) {
+            this.props.updateEvent(this.state);
+        } else {
+            this.props.createEvent(this.state);
+        }
+       
+        
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value})
